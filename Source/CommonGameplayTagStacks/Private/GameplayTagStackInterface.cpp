@@ -2,7 +2,7 @@
 
 
 #include "GameplayTagStackInterface.h"
-
+#include "GameFramework/Actor.h"
 #include "GameplayTagStackContainer.h"
 
 
