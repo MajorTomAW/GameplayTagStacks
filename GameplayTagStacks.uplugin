@@ -6,7 +6,7 @@
 	"Description": "Gameplay Tag Stacks that can be used to manage replicated gameplay tags in a stack-like manner.",
 	"Category": "Gameplay",
 	"CreatedBy": "MajorT",
-	"CreatedByURL": "https://www.epicgames.com",
+	"CreatedByURL": "",
 	"DocsURL": "",
 	"MarketplaceURL": "",
 	"CanContainContent": false,
@@ -15,7 +15,7 @@
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "CommonGameplayTagStacks",
+			"Name": "GameplayTagStacks",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}

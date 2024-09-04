@@ -34,7 +34,7 @@ public:
 	 * @param TagToCheck	Tag to check for a match
 	 * @returns True if the actor has a stack of the specified tags, false if not
 	 */
-	COMMONGAMEPLAYTAGSTACKS_API virtual bool HasMatchingGameplayTagStack(FGameplayTag TagToCheck) const;
+	GAMEPLAYTAGSTACKS_API virtual bool HasMatchingGameplayTagStack(FGameplayTag TagToCheck) const;
 
 	/**
 	 * Returns the stack count of the specified tag
@@ -42,7 +42,7 @@ public:
 	 * @param TagToCheck Tag to check for a match
 	 * @returns The stack count of the specified tag (0 if not found)
 	 */
-	COMMONGAMEPLAYTAGSTACKS_API virtual int32 GetGameplayTagStackCount(FGameplayTag TagToCheck) const;
+	GAMEPLAYTAGSTACKS_API virtual int32 GetGameplayTagStackCount(FGameplayTag TagToCheck) const;
 
 	/**
 	 * Adds a specified number of stacks of the specified tag to the actor.
@@ -51,7 +51,7 @@ public:
 	 * @param StackCount Number of stacks to add
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = GameplayTags)
-	COMMONGAMEPLAYTAGSTACKS_API virtual void AddGameplayTagStack(FGameplayTag Tag, int32 StackCount);
+	GAMEPLAYTAGSTACKS_API virtual void AddGameplayTagStack(FGameplayTag Tag, int32 StackCount);
 
 	/**
 	 * Removes a specified number of stacks of the specified tag from the actor.
@@ -60,7 +60,7 @@ public:
 	 * @param StackCount Number of stacks to remove
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintAuthorityOnly, Category = GameplayTags)
-	COMMONGAMEPLAYTAGSTACKS_API virtual void RemoveGameplayTagStack(FGameplayTag Tag, int32 StackCount);
+	GAMEPLAYTAGSTACKS_API virtual void RemoveGameplayTagStack(FGameplayTag Tag, int32 StackCount);
 };
 
 /** Blueprint function library for working with gameplay tag stacks. */
@@ -76,7 +76,7 @@ public:
 	 * @param TagStackContainer	[OUT] Set of tag stacks on the actor
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = GameplayTags)
-	static COMMONGAMEPLAYTAGSTACKS_API void GetOwnedGameplayTagStacks(AActor* TargetActor, FGameplayTagStackContainer& TagStackContainer);
+	static GAMEPLAYTAGSTACKS_API void GetOwnedGameplayTagStacks(AActor* TargetActor, FGameplayTagStackContainer& TagStackContainer);
 
 	/**
 	 * Check if the actor has at least one stack of the specified tags
@@ -85,7 +85,7 @@ public:
 	 * @returns True if the actor has a stack of the specified tags, false if not
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = GameplayTags)
-	static COMMONGAMEPLAYTAGSTACKS_API bool HasMatchingGameplayTagStack(AActor* TargetActor, const FGameplayTag TagToCheck);
+	static GAMEPLAYTAGSTACKS_API bool HasMatchingGameplayTagStack(AActor* TargetActor, const FGameplayTag TagToCheck);
 
 	/**
 	 * Check if that tag stack container has at least one stack of the specified tags
@@ -94,7 +94,7 @@ public:
 	 * @returns True if the tag stack container has a stack of the specified tags, false if not
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = GameplayTags)
-	static COMMONGAMEPLAYTAGSTACKS_API bool HasMatchingGameplayTagStackContainer(const FGameplayTagStackContainer& TagStackContainer, const FGameplayTag TagToCheck);
+	static GAMEPLAYTAGSTACKS_API bool HasMatchingGameplayTagStackContainer(const FGameplayTagStackContainer& TagStackContainer, const FGameplayTag TagToCheck);
 
 	/**
 	 * Returns the stack count of the specified tag
@@ -104,7 +104,7 @@ public:
 	 * @returns The stack count of the specified tag (0 if not found)
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = GameplayTags)
-	static COMMONGAMEPLAYTAGSTACKS_API int32 GetGameplayTagStackCount(AActor* TargetActor, const FGameplayTag TagToCheck);
+	static GAMEPLAYTAGSTACKS_API int32 GetGameplayTagStackCount(AActor* TargetActor, const FGameplayTag TagToCheck);
 
 	/**
 	 * Returns the stack count of the specified tag
@@ -114,5 +114,5 @@ public:
 	 * @returns The stack count of the specified tag (0 if not found)
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = GameplayTags)
-	static COMMONGAMEPLAYTAGSTACKS_API int32 GetGameplayTagStackCountContainer(const FGameplayTagStackContainer& TagStackContainer, const FGameplayTag TagToCheck);
+	static GAMEPLAYTAGSTACKS_API int32 GetGameplayTagStackCountContainer(const FGameplayTagStackContainer& TagStackContainer, const FGameplayTag TagToCheck);
 };

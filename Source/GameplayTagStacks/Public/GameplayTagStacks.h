@@ -4,7 +4,7 @@
 
 #include "Modules/ModuleManager.h"
 
-class FCommonGameplayTagStacksModule : public IModuleInterface
+class FGameplayTagStacksModule : public IModuleInterface
 {
 public:
 

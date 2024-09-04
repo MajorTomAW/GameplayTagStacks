@@ -1,16 +1,16 @@
 ﻿// Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "CommonGameplayTagStacks.h"
+#include "GameplayTagStacks.h"
 
-#define LOCTEXT_NAMESPACE "FCommonGameplayTagStacksModule"
+#define LOCTEXT_NAMESPACE "FGameplayTagStacksModule"
 
-void FCommonGameplayTagStacksModule::StartupModule()
+void FGameplayTagStacksModule::StartupModule()
 {
 	// This code will execute after your module is loaded into memory; the exact timing is specified in the .uplugin file per-module
 	
 }
 
-void FCommonGameplayTagStacksModule::ShutdownModule()
+void FGameplayTagStacksModule::ShutdownModule()
 {
 	// This function may be called during shutdown to clean up your module.  For modules that support dynamic reloading,
 	// we call this function before unloading the module.
@@ -19,4 +19,4 @@ void FCommonGameplayTagStacksModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FCommonGameplayTagStacksModule, CommonGameplayTagStacks)
+IMPLEMENT_MODULE(FGameplayTagStacksModule, GameplayTagStacks)
